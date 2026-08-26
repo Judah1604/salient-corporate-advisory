@@ -1,0 +1,1274 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>
+			Salient Corporate Advisory Enterprises — Professional HR,
+			Organisational Infrastructure & Corporate Governance Advisory
+		</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			:root {
+				--ink: #1b2429;
+				--azure: #32434b;
+				--azure-deep: #232f35;
+				--cyan: #2fb8b8;
+				--cyan-bright: #32caca;
+				--paper: #f3f6f6;
+				--paper-alt: #e7edee;
+				--line: #c7d3d5;
+				--line-soft: #dce4e5;
+				--white: #ffffff;
+				--max: 1180px;
+			}
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+			html {
+				scroll-behavior: smooth;
+			}
+			body {
+				background: var(--paper);
+				color: var(--ink);
+				font-family: "IBM Plex Sans", sans-serif;
+				font-size: 16px;
+				line-height: 1.6;
+				-webkit-font-smoothing: antialiased;
+			}
+			h1,
+			h2,
+			h3,
+			h4 {
+				font-family: "Fraunces", serif;
+				font-weight: 500;
+				line-height: 1.08;
+				letter-spacing: -0.01em;
+				color: var(--azure-deep);
+			}
+			.mono {
+				font-family: "IBM Plex Mono", monospace;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				font-size: 12px;
+			}
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+			.wrap {
+				max-width: var(--max);
+				margin: 0 auto;
+				padding: 0 32px;
+			}
+			img,
+			svg {
+				display: block;
+				max-width: 100%;
+			}
+			::selection {
+				background: var(--cyan-bright);
+				color: var(--azure-deep);
+			}
+			:focus-visible {
+				outline: 2px solid var(--cyan-bright);
+				outline-offset: 3px;
+			}
+
+			/* ---------- NAV ---------- */
+			header {
+				position: sticky;
+				top: 0;
+				z-index: 100;
+				background: rgba(243, 246, 246, 0.92);
+				backdrop-filter: blur(10px);
+				border-bottom: 1px solid var(--line-soft);
+			}
+			nav.wrap {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				height: 76px;
+			}
+			.brand {
+				display: flex;
+				flex-direction: column;
+				line-height: 1.15;
+			}
+			.brand-name {
+				font-family: "Fraunces", serif;
+				font-weight: 600;
+				font-size: 19px;
+				color: var(--azure-deep);
+			}
+			.brand-tag {
+				font-family: "IBM Plex Mono", monospace;
+				font-size: 10px;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: var(--cyan);
+				margin-top: 2px;
+                width: 300px;
+			}
+			.navlinks {
+				display: flex;
+				gap: 34px;
+				align-items: center;
+			}
+			.navlinks a {
+				font-size: 14px;
+				color: var(--azure);
+				position: relative;
+				padding: 4px 0;
+			}
+			.navlinks a:hover {
+				color: var(--cyan-bright);
+			}
+			.navcta {
+				background: var(--azure-deep);
+				color: var(--white);
+				padding: 11px 20px;
+				border-radius: 2px;
+				font-size: 13.5px;
+				font-weight: 500;
+				border: 1px solid var(--azure-deep);
+				transition: all 0.2s ease;
+			}
+			.navcta:hover {
+				background: var(--cyan-bright);
+				border-color: var(--cyan-bright);
+				color: var(--azure-deep);
+			}
+			.navtoggle {
+				display: none;
+			}
+
+			/* ---------- BLUEPRINT UTILITY ---------- */
+			.eyebrow {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				color: var(--cyan);
+			}
+			.corner-frame {
+				position: relative;
+				padding: 2px;
+			}
+			.corner-frame::before,
+			.corner-frame::after {
+				content: "";
+				position: absolute;
+				width: 14px;
+				height: 14px;
+				border-color: var(--cyan-bright);
+			}
+			.corner-frame::before {
+				top: -1px;
+				left: -1px;
+				border-top: 1.5px solid;
+				border-left: 1.5px solid;
+			}
+			.corner-frame::after {
+				bottom: -1px;
+				right: -1px;
+				border-bottom: 1.5px solid;
+				border-right: 1.5px solid;
+			}
+
+			/* ---------- HERO ---------- */
+			.hero {
+				position: relative;
+				padding: 96px 0 110px;
+				overflow: hidden;
+				background:
+					linear-gradient(var(--paper), var(--paper)) padding-box,
+					repeating-linear-gradient(
+						0deg,
+						var(--line-soft) 0 1px,
+						transparent 1px 64px
+					),
+					repeating-linear-gradient(
+						90deg,
+						var(--line-soft) 0 1px,
+						transparent 1px 64px
+					);
+			}
+			.hero-grid {
+				display: grid;
+				grid-template-columns: 1.1fr 0.9fr;
+				gap: 60px;
+				align-items: center;
+			}
+			.hero h1 {
+				font-size: clamp(34px, 4.6vw, 56px);
+				margin-bottom: 26px;
+			}
+			.hero h1 em {
+				font-style: normal;
+				color: var(--cyan);
+			}
+			.hero p.lede {
+				font-size: 18px;
+				max-width: 520px;
+				color: var(--azure);
+				margin-bottom: 34px;
+			}
+			.cta-row {
+				display: flex;
+				gap: 16px;
+				flex-wrap: wrap;
+				align-items: center;
+			}
+			.btn-primary {
+				background: var(--azure-deep);
+				color: var(--white);
+				padding: 15px 28px;
+				font-size: 14.5px;
+				font-weight: 500;
+				border-radius: 2px;
+				display: inline-block;
+				border: 1px solid var(--azure-deep);
+				transition: all 0.2s ease;
+			}
+			.btn-primary:hover {
+				background: var(--cyan-bright);
+				border-color: var(--cyan-bright);
+				color: var(--azure-deep);
+			}
+			.btn-ghost {
+				padding: 15px 24px;
+				font-size: 14.5px;
+				font-weight: 500;
+				border: 1px solid var(--azure);
+				border-radius: 2px;
+				color: var(--azure-deep);
+			}
+			.btn-ghost:hover {
+				border-color: var(--cyan-bright);
+				color: var(--cyan);
+			}
+
+			/* signature diagram */
+			.stack {
+				background: var(--azure-deep);
+				border-radius: 3px;
+				padding: 34px 30px;
+				box-shadow: 0 30px 60px -20px rgba(35, 47, 53, 0.45);
+			}
+			.stack-label {
+				color: var(--cyan-bright);
+				margin-bottom: 20px;
+			}
+			.stack-row {
+				display: flex;
+				align-items: center;
+				gap: 14px;
+				padding: 13px 0;
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+				opacity: 0;
+				transform: translateX(-14px);
+				animation: slideIn 0.6s ease forwards;
+			}
+			.stack-row:first-of-type {
+				border-top: none;
+			}
+			.stack-row .idx {
+				font-family: "IBM Plex Mono", monospace;
+				font-size: 12px;
+				color: var(--cyan-bright);
+				width: 26px;
+			}
+			.stack-row .lbl {
+				color: var(--white);
+				font-size: 15px;
+				font-weight: 500;
+			}
+			.stack-row .sub {
+				color: #9fb0b6;
+				font-size: 12.5px;
+				margin-top: 2px;
+			}
+			@keyframes slideIn {
+				to {
+					opacity: 1;
+					transform: translateX(0);
+				}
+			}
+			.stack-row:nth-child(1) {
+				animation-delay: 0.05s;
+			}
+			.stack-row:nth-child(2) {
+				animation-delay: 0.15s;
+			}
+			.stack-row:nth-child(3) {
+				animation-delay: 0.25s;
+			}
+			.stack-row:nth-child(4) {
+				animation-delay: 0.35s;
+			}
+			.stack-row:nth-child(5) {
+				animation-delay: 0.45s;
+			}
+			.stack-arrow {
+				color: var(--cyan-bright);
+				font-size: 12px;
+				margin-left: 40px;
+				opacity: 0.7;
+			}
+
+			/* ---------- SECTION BASE ---------- */
+			section {
+				padding: 100px 0;
+			}
+			.section-head {
+				max-width: 640px;
+				margin-bottom: 56px;
+			}
+			.section-head h2 {
+				font-size: clamp(26px, 3.2vw, 38px);
+			}
+			.alt-bg {
+				background: var(--paper-alt);
+			}
+			.reveal {
+				opacity: 0;
+				transform: translateY(22px);
+				transition:
+					opacity 0.7s ease,
+					transform 0.7s ease;
+			}
+			.reveal.in {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			/* ---------- PAIN POINTS ---------- */
+			.pain-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1px;
+				background: var(--line);
+				border: 1px solid var(--line);
+			}
+			.pain-card {
+				background: var(--paper);
+				padding: 34px 30px;
+			}
+			.pain-card h4 {
+				font-size: 17px;
+				margin-bottom: 10px;
+				color: var(--azure-deep);
+			}
+			.pain-card p {
+				font-size: 14.5px;
+				color: #4c5c62;
+			}
+			.pain-card .mono {
+				color: var(--cyan);
+				margin-bottom: 14px;
+				display: block;
+			}
+
+			/* ---------- PILLARS ---------- */
+			.pillars {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 28px;
+			}
+			.pillar {
+				background: var(--white);
+				border: 1px solid var(--line-soft);
+				border-radius: 3px;
+				padding: 34px 28px 30px;
+				position: relative;
+			}
+			.pillar-num {
+				font-family: "IBM Plex Mono", monospace;
+				font-size: 13px;
+				color: var(--cyan);
+				margin-bottom: 22px;
+				display: block;
+			}
+			.pillar h3 {
+				font-size: 21px;
+				margin-bottom: 14px;
+			}
+			.pillar ul {
+				list-style: none;
+				margin-top: 16px;
+			}
+			.pillar li {
+				font-size: 13.5px;
+				color: #4c5c62;
+				padding: 8px 0 8px 18px;
+				position: relative;
+				border-top: 1px solid var(--paper-alt);
+			}
+			.pillar li:first-child {
+				border-top: none;
+				padding-top: 0;
+			}
+			.pillar li::before {
+				content: "—";
+				position: absolute;
+				left: 0;
+				color: var(--cyan);
+			}
+			.pillar-foot {
+				margin-top: 20px;
+				font-size: 13px;
+				color: var(--cyan);
+				font-weight: 500;
+			}
+
+			/* ---------- MODEL DIAGRAM ---------- */
+			.model {
+				display: flex;
+				flex-direction: column;
+				gap: 0;
+				border: 1px solid var(--line);
+				border-radius: 3px;
+				overflow: hidden;
+			}
+			.model-row {
+				display: grid;
+				grid-template-columns: 210px 1fr;
+				border-top: 1px solid var(--line);
+				background: var(--white);
+			}
+			.model-row:first-child {
+				border-top: none;
+			}
+			.model-label {
+				background: var(--azure-deep);
+				color: var(--white);
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				padding: 20px 26px;
+			}
+			.model-label .mono {
+				color: var(--cyan-bright);
+				margin-bottom: 4px;
+			}
+			.model-label span.name {
+				font-family: "Fraunces", serif;
+				font-size: 19px;
+			}
+			.model-desc {
+				padding: 20px 28px;
+				display: flex;
+				align-items: center;
+				color: #4c5c62;
+				font-size: 14.5px;
+			}
+
+			/* ---------- WHAT WE SOLVE ---------- */
+			.solve-list {
+				display: flex;
+				flex-direction: column;
+			}
+			.solve-row {
+				display: grid;
+				grid-template-columns: 1fr 40px 1fr;
+				align-items: center;
+				gap: 18px;
+				padding: 24px 0;
+				border-top: 1px solid var(--line-soft);
+			}
+			.solve-row:first-child {
+				border-top: none;
+			}
+			.solve-problem {
+				font-size: 16px;
+				font-weight: 500;
+				color: var(--azure-deep);
+			}
+			.solve-arrow {
+				color: var(--cyan);
+				text-align: center;
+				font-size: 16px;
+			}
+			.solve-answer {
+				font-size: 14.5px;
+				color: #4c5c62;
+			}
+
+			/* ---------- ABOUT ---------- */
+			.about-grid {
+				display: grid;
+				grid-template-columns: 0.85fr 1.15fr;
+				gap: 60px;
+				align-items: start;
+			}
+			.about-grid p {
+				color: #4c5c62;
+				margin-bottom: 16px;
+				font-size: 15.5px;
+			}
+			.about-grid p strong {
+				color: var(--azure-deep);
+			}
+			.stat-block {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1px;
+				background: var(--line);
+				border: 1px solid var(--line);
+			}
+			.stat {
+				background: var(--paper);
+				padding: 26px;
+			}
+			.stat .num {
+				font-family: "Fraunces", serif;
+				font-size: 32px;
+				color: var(--azure-deep);
+			}
+			.stat .cap {
+				font-size: 12.5px;
+				color: #5f7075;
+				margin-top: 4px;
+			}
+
+			/* ---------- WHY ---------- */
+			.why-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1px;
+				background: var(--line);
+				border: 1px solid var(--line);
+			}
+			.why-card {
+				background: var(--paper-alt);
+				padding: 30px 28px;
+			}
+			.why-card h4 {
+				font-size: 16.5px;
+				margin-bottom: 8px;
+			}
+			.why-card p {
+				font-size: 14px;
+				color: #4c5c62;
+			}
+
+			/* ---------- CTA ---------- */
+			.cta-band {
+				background: var(--azure-deep);
+				color: var(--white);
+				border-radius: 3px;
+				padding: 54px 50px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 40px;
+				background-image: repeating-linear-gradient(
+					45deg,
+					rgba(255, 255, 255, 0.02) 0 1px,
+					transparent 1px 18px
+				);
+			}
+			.cta-band h3 {
+				color: var(--white);
+				font-size: 26px;
+				max-width: 420px;
+			}
+			.cta-band p {
+				color: #b9c8cc;
+				font-size: 14.5px;
+				margin-top: 10px;
+				max-width: 420px;
+			}
+
+			/* ---------- FOOTER ---------- */
+			footer {
+				background: var(--azure-deep);
+				color: #b9c8cc;
+				padding: 64px 0 30px;
+			}
+			.footer-grid {
+				display: grid;
+				grid-template-columns: 1.3fr 1fr 1fr 1fr;
+				gap: 40px;
+				padding-bottom: 44px;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			}
+			.footer-grid h5 {
+				color: var(--cyan-bright);
+				font-size: 12px;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				font-family: "IBM Plex Mono", monospace;
+				margin-bottom: 16px;
+			}
+			.footer-grid a,
+			.footer-grid p {
+				display: block;
+				font-size: 14px;
+				margin-bottom: 10px;
+				color: #b9c8cc;
+			}
+			.footer-grid a:hover {
+				color: var(--cyan-bright);
+			}
+			.foot-brand {
+				font-family: "Fraunces", serif;
+				font-size: 20px;
+				color: var(--white);
+				margin-bottom: 12px;
+			}
+			.foot-bottom {
+				display: flex;
+				justify-content: space-between;
+				padding-top: 26px;
+				font-size: 12.5px;
+				color: #7c8f94;
+			}
+
+			@media (max-width: 900px) {
+				.hero-grid,
+				.about-grid {
+					grid-template-columns: 1fr;
+				}
+				.pain-grid,
+				.pillars,
+				.why-grid {
+					grid-template-columns: 1fr;
+				}
+				.model-row {
+					grid-template-columns: 1fr;
+				}
+				.footer-grid {
+					grid-template-columns: 1fr 1fr;
+				}
+				.navlinks {
+					display: none;
+				}
+				.cta-band {
+					flex-direction: column;
+					align-items: flex-start;
+				}
+				.solve-row {
+					grid-template-columns: 1fr;
+				}
+				.solve-arrow {
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav class="wrap">
+				<div class="brand">
+					<span class="brand-name">Salient Corporate Advisory</span>
+					<span class="brand-tag"
+						>Professional HR · Organisational Infrastructure ·
+						Corporate Governance</span
+					>
+				</div>
+				<div class="navlinks">
+					<a href="#about">About</a>
+					<a href="#services">Services</a>
+					<a href="#governance">Governance</a>
+					<a href="#infrastructure">Infrastructure</a>
+					<a href="#contact">Contact</a>
+				</div>
+				<a class="navcta" href="#diagnostic">Request a Diagnostic</a>
+			</nav>
+		</header>
+
+		<section class="hero">
+			<div class="wrap hero-grid">
+				<div>
+					<div class="eyebrow mono">
+						Professional HR · Organisational Infrastructure ·
+						Corporate Governance
+					</div>
+					<h1>
+						Your business has grown.<br />Now your
+						<em>organisation</em> needs to catch up.
+					</h1>
+					<p class="lede">
+						We help growing Nigerian businesses build the people,
+						structures, systems and governance required to scale
+						beyond founder-dependent management.
+					</p>
+					<div class="cta-row">
+						<a class="btn-primary" href="#diagnostic"
+							>Request an Organisational &amp; HR Diagnostic</a
+						>
+						<a class="btn-ghost" href="#services"
+							>See how we work →</a
+						>
+					</div>
+				</div>
+				<div class="stack corner-frame">
+					<div class="stack-label mono">The Salient Model</div>
+					<div class="stack-row">
+						<span class="idx">01</span>
+						<div>
+							<div class="lbl">People</div>
+							<div class="sub">
+								Leadership, workforce, capability
+							</div>
+						</div>
+					</div>
+					<div class="stack-row">
+						<span class="idx">02</span>
+						<div>
+							<div class="lbl">Structure</div>
+							<div class="sub">
+								Roles, reporting lines, functions
+							</div>
+						</div>
+					</div>
+					<div class="stack-row">
+						<span class="idx">03</span>
+						<div>
+							<div class="lbl">Systems</div>
+							<div class="sub">
+								HR, performance, policy, process
+							</div>
+						</div>
+					</div>
+					<div class="stack-row">
+						<span class="idx">04</span>
+						<div>
+							<div class="lbl">Governance</div>
+							<div class="sub">
+								Authority, accountability, oversight
+							</div>
+						</div>
+					</div>
+					<div class="stack-row">
+						<span class="idx">05</span>
+						<div>
+							<div class="lbl">Performance</div>
+							<div class="sub">
+								Execution &amp; sustainable growth
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="diagnose-pain">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<div class="eyebrow mono">The Diagnosis</div>
+					<h2>
+						Has your business outgrown the way it's being managed?
+					</h2>
+				</div>
+				<div class="pain-grid reveal">
+					<div class="pain-card">
+						<span class="mono">01</span>
+						<h4>Founder Dependency</h4>
+						<p>
+							Too many decisions still require your direct
+							intervention to move forward.
+						</p>
+					</div>
+					<div class="pain-card">
+						<span class="mono">02</span>
+						<h4>Unclear Accountability</h4>
+						<p>
+							People carry responsibilities, but ownership of
+							outcomes is difficult to pin down.
+						</p>
+					</div>
+					<div class="pain-card">
+						<span class="mono">03</span>
+						<h4>Management Bottlenecks</h4>
+						<p>
+							Managers exist on the org chart, but decisions keep
+							travelling back upward.
+						</p>
+					</div>
+					<div class="pain-card">
+						<span class="mono">04</span>
+						<h4>Weak HR Infrastructure</h4>
+						<p>
+							Policies, performance systems and employment
+							practices remain informal.
+						</p>
+					</div>
+					<div class="pain-card">
+						<span class="mono">05</span>
+						<h4>Organisational Complexity</h4>
+						<p>
+							The business has grown — but roles, reporting lines
+							and functions haven't kept pace.
+						</p>
+					</div>
+					<div class="pain-card">
+						<span class="mono">06</span>
+						<h4>Governance Gaps</h4>
+						<p>
+							Decision-making, authority, oversight and controls
+							are not clearly defined.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="services" class="alt-bg">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<div class="eyebrow mono">What We Do</div>
+					<h2>
+						Three advisory pillars, one organisational proposition.
+					</h2>
+				</div>
+				<div class="pillars reveal">
+					<div class="pillar">
+						<span class="pillar-num mono"
+							>01 / Professional HR Advisory</span
+						>
+						<h3>The people foundation</h3>
+						<ul>
+							<li>HR Diagnostics &amp; Compliance</li>
+							<li>HR Policies &amp; Employee Handbook</li>
+							<li>Employment Documentation</li>
+							<li>Performance Management</li>
+							<li>Recruitment &amp; Workforce Planning</li>
+							<li>Compensation &amp; Salary Structure</li>
+							<li>HR Outsourcing / Fractional HR</li>
+						</ul>
+					</div>
+					<div
+						class="pillar"
+						style="border-color: var(--cyan-bright)"
+					>
+						<span class="pillar-num mono"
+							>02 / Organisational Infrastructure</span
+						>
+						<h3>The architecture layer</h3>
+						<ul>
+							<li>Organisation Design &amp; Structure</li>
+							<li>Job &amp; Role Architecture</li>
+							<li>Decision Rights &amp; Delegation</li>
+							<li>Management Structures</li>
+							<li>Leadership &amp; Succession Planning</li>
+							<li>Performance Architecture</li>
+						</ul>
+						<div class="pillar-foot">
+							Our signature discipline →
+						</div>
+					</div>
+					<div class="pillar">
+						<span class="pillar-num mono"
+							>03 / Corporate Governance Advisory</span
+						>
+						<h3>The oversight layer</h3>
+						<ul>
+							<li>Governance Framework Design</li>
+							<li>Board / Management Role Clarity</li>
+							<li>Delegation of Authority</li>
+							<li>Internal Controls &amp; Risk Advisory</li>
+							<li>Founder-to-Management Transition</li>
+							<li>Governance Readiness for Growth</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="infrastructure">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<div class="eyebrow mono">
+						Organisational Infrastructure Advisory
+					</div>
+					<h2>
+						Build the architecture required for your next stage of
+						growth.
+					</h2>
+				</div>
+				<div class="model reveal">
+					<div class="model-row">
+						<div class="model-label">
+							<span class="mono">People</span
+							><span class="name">Leadership Infrastructure</span>
+						</div>
+						<div class="model-desc">
+							Leadership capability and succession — building the
+							bench, not just the org chart.
+						</div>
+					</div>
+					<div class="model-row">
+						<div class="model-label">
+							<span class="mono">Structure</span
+							><span class="name">Role Architecture</span>
+						</div>
+						<div class="model-desc">
+							Jobs, responsibilities, authority and accountability
+							— who owns what, and why.
+						</div>
+					</div>
+					<div class="model-row">
+						<div class="model-label">
+							<span class="mono">Systems</span
+							><span class="name">Management Infrastructure</span>
+						</div>
+						<div class="model-desc">
+							Management layers, spans of control, and how
+							decisions actually get made.
+						</div>
+					</div>
+					<div class="model-row">
+						<div class="model-label">
+							<span class="mono">Governance</span
+							><span class="name">Governance Infrastructure</span>
+						</div>
+						<div class="model-desc">
+							Decision rights, controls and oversight — the
+							architecture behind good judgment at scale.
+						</div>
+					</div>
+					<div class="model-row">
+						<div class="model-label">
+							<span class="mono">Performance</span
+							><span class="name"
+								>Performance Infrastructure</span
+							>
+						</div>
+						<div class="model-desc">
+							KPIs, performance management and accountability —
+							closing the loop.
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="governance" class="alt-bg">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<div class="eyebrow mono">
+						Corporate Governance Advisory
+					</div>
+					<h2>
+						Governance for growing businesses — not board
+						secretarial services for listed companies.
+					</h2>
+				</div>
+				<div class="about-grid reveal">
+					<div>
+						<p>
+							Growing SMEs often reach a point where ownership and
+							management blur, founder authority becomes
+							excessive, decisions aren't clearly delegated, and
+							controls stay informal.
+						</p>
+						<p>
+							<strong
+								>Professional governance doesn't make a growing
+								business bureaucratic.</strong
+							>
+							It makes decision-making clearer, accountability
+							stronger, and the organisation less dependent on any
+							one personality.
+						</p>
+					</div>
+					<div class="why-grid">
+						<div class="why-card">
+							<h4>Delegation of Authority</h4>
+							<p>
+								Clear limits on who can decide what, at what
+								value, without founder sign-off.
+							</p>
+						</div>
+						<div class="why-card">
+							<h4>Decision Rights</h4>
+							<p>
+								Documented ownership of key decisions across the
+								management layer.
+							</p>
+						</div>
+						<div class="why-card">
+							<h4>Internal Controls</h4>
+							<p>
+								Systematic checks that reduce dependence on any
+								single individual.
+							</p>
+						</div>
+						<div class="why-card">
+							<h4>Governance Readiness</h4>
+							<p>
+								The oversight structures investors and
+								institutional partners expect to see.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="solve">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<div class="eyebrow mono">
+						If Your Business Is Experiencing…
+					</div>
+					<h2>What we solve.</h2>
+				</div>
+				<div class="solve-list reveal">
+					<div class="solve-row">
+						<div class="solve-problem">Founder Dependency</div>
+						<div class="solve-arrow">→</div>
+						<div class="solve-answer">
+							Organisational Design + Delegation + Decision Rights
+						</div>
+					</div>
+					<div class="solve-row">
+						<div class="solve-problem">Rapid Growth</div>
+						<div class="solve-arrow">→</div>
+						<div class="solve-answer">
+							Workforce Planning + Organisation Structure + HR
+							Infrastructure
+						</div>
+					</div>
+					<div class="solve-row">
+						<div class="solve-problem">Management Weakness</div>
+						<div class="solve-arrow">→</div>
+						<div class="solve-answer">
+							Leadership Development + Performance Architecture +
+							Accountability
+						</div>
+					</div>
+					<div class="solve-row">
+						<div class="solve-problem">Governance Gaps</div>
+						<div class="solve-arrow">→</div>
+						<div class="solve-answer">
+							Governance Framework + Authority + Controls +
+							Oversight
+						</div>
+					</div>
+					<div class="solve-row">
+						<div class="solve-problem">HR Risk</div>
+						<div class="solve-arrow">→</div>
+						<div class="solve-answer">
+							HR Audit + Compliance + Policies + Employment
+							Documentation
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="about" class="alt-bg">
+			<div class="wrap about-grid">
+				<div class="reveal">
+					<div class="eyebrow mono">About</div>
+					<h2 style="font-size: 28px; margin-bottom: 20px">
+						From founder-led to professionally managed.
+					</h2>
+					<p>
+						Many businesses begin informally. The founder makes
+						decisions, knows everyone, personally oversees important
+						matters and solves problems as they arise.
+					</p>
+					<p>
+						But growth changes the equation. More people. More
+						customers. More transactions. More managers. More risk.
+						More decisions. Eventually, informal management becomes
+						insufficient.
+					</p>
+					<p>
+						<strong>That is where Salient comes in.</strong> We help
+						growing Nigerian businesses build the professional HR,
+						organisational and governance infrastructure required to
+						move from founder-dependent management to structured,
+						accountable, sustainable operations.
+					</p>
+					<p>
+						Led by 24 years of professional experience across
+						manufacturing, hospitality, engineering, food chains and
+						multi-outlet operations in Nigeria:
+						<strong
+							>there is no bad organization — only bad management
+							operating bad policies.</strong
+						>
+					</p>
+				</div>
+				<div class="reveal stat-block">
+					<div class="stat">
+						<div class="num">24</div>
+						<div class="cap">Years of professional experience</div>
+					</div>
+					<div class="stat">
+						<div class="num">10–300</div>
+						<div class="cap">Employee businesses we work with</div>
+					</div>
+					<div class="stat">
+						<div class="num">20+</div>
+						<div class="cap">
+							Businesses helped build HR infrastructure
+						</div>
+					</div>
+					<div class="stat">
+						<div class="num">3</div>
+						<div class="cap">Advisory pillars, one proposition</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="who-we-help">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<div class="eyebrow mono">Who We Help</div>
+					<h2>We work with growing Nigerian businesses that are —</h2>
+				</div>
+				<div class="pain-grid reveal">
+					<div class="pain-card">
+						<h4>Moving beyond founder-led management</h4>
+					</div>
+					<div class="pain-card">
+						<h4>Scaling their workforce</h4>
+					</div>
+					<div class="pain-card">
+						<h4>Adding management layers</h4>
+					</div>
+					<div class="pain-card">
+						<h4>Expanding into new markets</h4>
+					</div>
+					<div class="pain-card">
+						<h4>
+							Preparing for investors or institutional
+							partnerships
+						</h4>
+					</div>
+					<div class="pain-card">
+						<h4>Building their second line of leadership</h4>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="why" class="alt-bg">
+			<div class="wrap">
+				<div class="section-head reveal">
+					<div class="eyebrow mono">Why Salient</div>
+					<h2>
+						We sit at the intersection of People, Organisation and
+						Governance.
+					</h2>
+				</div>
+				<p
+					class="reveal"
+					style="
+						max-width: 640px;
+						color: #4c5c62;
+						margin-bottom: 36px;
+					"
+				>
+					We don't look at HR problems in isolation. We examine how
+					people, organisational structure, management systems and
+					governance interact to influence business performance — the
+					same lens an internal General Counsel or organisational
+					strategist would bring, applied practically to growing
+					Nigerian businesses.
+				</p>
+			</div>
+		</section>
+
+		<section id="diagnostic">
+			<div class="wrap">
+				<div class="cta-band reveal">
+					<div>
+						<h3>Request an Organisational &amp; HR Diagnostic.</h3>
+						<p>
+							A structured assessment of People, Structure,
+							Systems, Leadership and Governance — the front door
+							to the full Salient advisory practice.
+						</p>
+					</div>
+					<a
+						class="btn-primary"
+						href="https://wa.me/2348121542574"
+						style="
+							background: var(--cyan-bright);
+							border-color: var(--cyan-bright);
+							color: var(--azure-deep);
+							white-space: nowrap;
+						"
+						>Start on WhatsApp →</a
+					>
+				</div>
+			</div>
+		</section>
+
+		<footer id="contact">
+			<div class="wrap">
+				<div class="footer-grid">
+					<div>
+						<div class="foot-brand">
+							Salient Corporate Advisory Enterprises
+						</div>
+						<p>
+							Professional HR &amp; Corporate Governance Advisory
+							for growing Nigerian businesses.
+						</p>
+					</div>
+					<div>
+						<h5>Advisory</h5>
+						<a href="#services">Professional HR Advisory</a>
+						<a href="#infrastructure"
+							>Organisational Infrastructure</a
+						>
+						<a href="#governance">Corporate Governance</a>
+					</div>
+					<div>
+						<h5>Company</h5>
+						<a href="#about">About</a>
+						<a href="#who-we-help">Who We Help</a>
+						<a href="#diagnostic">Diagnostic</a>
+					</div>
+					<div>
+						<h5>Contact</h5>
+						<a href="https://wa.me/2348121542574"
+							>WhatsApp: +234 812 154 2574</a
+						>
+						<a href="mailto:info@salientconsulting.com.ng"
+							>info@salientconsulting.com.ng</a
+						>
+					</div>
+				</div>
+				<div class="foot-bottom">
+					<span
+						>© 2026 Salient Corporate Advisory Enterprises. All
+						rights reserved.</span
+					>
+					<span>Lagos, Nigeria</span>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			const reveals = document.querySelectorAll(".reveal");
+			const io = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((e) => {
+						if (e.isIntersecting) {
+							e.target.classList.add("in");
+							io.unobserve(e.target);
+						}
+					});
+				},
+				{ threshold: 0.12 },
+			);
+			reveals.forEach((el) => io.observe(el));
+		</script>
+	</body>
+</html>
