@@ -11,3 +11,4 @@ const io = new IntersectionObserver(
 	{ threshold: 0.12 },
 );
 reveals.forEach((el) => io.observe(el));
+s

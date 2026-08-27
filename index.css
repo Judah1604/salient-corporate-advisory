@@ -71,7 +71,7 @@ header {
 	position: sticky;
 	top: 0;
 	z-index: 100;
-	background: rgba(243, 246, 246, 0.92);
+	background: var(--azure);
 	backdrop-filter: blur(10px);
 	border-bottom: 1px solid var(--line-soft);
 }
@@ -81,6 +81,17 @@ nav.wrap {
 	justify-content: space-between;
 	height: 76px;
 }
+
+.brand {
+	display: inline-flex;
+	gap: 10px;
+
+    img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 .brand a {
 	display: flex;
 	flex-direction: column;
@@ -90,14 +101,14 @@ nav.wrap {
 	font-family: "Fraunces", serif;
 	font-weight: 600;
 	font-size: 19px;
-	color: var(--azure-deep);
+	color: var(--white);
 }
 .brand-tag {
 	font-family: "IBM Plex Mono", monospace;
 	font-size: 10px;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
-	color: var(--cyan);
+	color: var(--cyan-bright);
 	margin-top: 2px;
 	width: 300px;
 }
@@ -108,12 +119,12 @@ nav.wrap {
 }
 .navlinks a {
 	font-size: 14px;
-	color: var(--azure);
+	color: var(--white);
 	position: relative;
 	padding: 4px 0;
 }
 .navlinks a:hover {
-	color: var(--cyan);
+	color: var(--cyan-bright);
 }
 .navcta {
 	background: var(--azure-deep);
@@ -166,42 +177,51 @@ nav.wrap {
 	border-right: 1.5px solid;
 }
 
+.services-bg {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	filter: brightness(0.5);
+}
+
 /* ---------- HERO ---------- */
 .hero {
 	position: relative;
-	padding: 96px 0 110px;
-	overflow: hidden;
-	background:
-		linear-gradient(var(--paper), var(--paper)) padding-box,
-		repeating-linear-gradient(
-			0deg,
-			var(--line-soft) 0 1px,
-			transparent 1px 64px
-		),
-		repeating-linear-gradient(
-			90deg,
-			var(--line-soft) 0 1px,
-			transparent 1px 64px
-		);
+	width: 100%;
+	height: 100vh;
+	background-image: url("./images/hero.jpg"); /* swap in the real hero photo */
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.hero__scrim {
+	position: absolute;
+	inset: 0;
+	background: rgba(20, 22, 26, 0.55);
 }
 .hero-grid {
 	display: grid;
 	grid-template-columns: 1.1fr 0.9fr;
 	gap: 60px;
 	align-items: center;
+	position: relative;
+	z-index: 1;
+	height: 100%;
+	padding: 0 1.5rem;
 }
 .hero h1 {
 	font-size: clamp(34px, 4.6vw, 56px);
 	margin-bottom: 26px;
+	color: var(--white);
 }
 .hero h1 em {
 	font-style: normal;
-	color: var(--cyan);
+	color: var(--cyan-bright);
 }
 .hero p.lede {
 	font-size: 18px;
 	max-width: 520px;
-	color: var(--azure);
+	color: var(--white);
 	margin-bottom: 34px;
 }
 .cta-row {
@@ -230,9 +250,9 @@ nav.wrap {
 	padding: 15px 24px;
 	font-size: 14.5px;
 	font-weight: 500;
-	border: 1px solid var(--azure);
+	border: 1px solid var(--line-soft);
 	border-radius: 2px;
-	color: var(--azure-deep);
+	color: var(--white);
 }
 .btn-ghost:hover {
 	border-color: var(--cyan-bright);
@@ -454,6 +474,115 @@ section {
 	font-size: 14.5px;
 }
 
+.team {
+	h1 {
+		text-align: center;
+		margin-bottom: 26px;
+	}
+	.teamgrid {
+		margin: 0 auto;
+		max-width: 72rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+		margin-bottom: 60px;
+
+		.team-card {
+			position: relative;
+			aspect-ratio: 4 / 3;
+			border-radius: 12px;
+			overflow: hidden;
+			background-size: cover;
+			background-position: center top;
+			background-color: #d8d2c4; /* placeholder fill until a real photo is set */
+		}
+
+		/* swap this background-image per card */
+		.team-card--one {
+			background-image: url("./images/team/photo.jpeg");
+		}
+		.team-card--two {
+			background-image: url("./images/team/photo2.png");
+		}
+		.team-card--three {
+			background-image: url("./images/team/photo3.jpeg");
+		}
+
+		.scrim {
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(
+				to top,
+				rgba(28, 27, 24, 0.92) 0%,
+				rgba(28, 27, 24, 0.55) 28%,
+				rgba(28, 27, 24, 0) 60%
+			);
+		}
+
+		.caption {
+			position: absolute;
+			left: 1.5rem;
+			right: 1.5rem;
+			bottom: 1.5rem;
+		}
+
+		.caption h3 {
+			margin: 0;
+			color: #faf8f3;
+			font-size: 22px;
+			font-weight: 700;
+		}
+
+		.caption p {
+			margin: 0.3rem 0 0;
+			color: #e4e1d8;
+			font-size: 14.5px;
+		}
+	}
+}
+@media (max-width: 720px) {
+	.teamgrid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.objectives-section {
+	margin: 0 auto;
+	max-width: 56rem;
+	padding: 1.5rem;
+
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+	}
+
+	.card {
+		border: 1px solid var(--line);
+		border-top: 4px solid var(--azure);
+		padding: 2rem;
+	}
+
+	.card h3 {
+		margin: 0;
+		font-size: 20px;
+		font-weight: 700;
+	}
+
+	.card p {
+		margin: 1rem 0 0;
+		line-height: 1.7;
+		color: var(--muted);
+		font-size: 15px;
+	}
+
+	@media (max-width: 640px) {
+		.grid {
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
 /* ---------- WHAT WE SOLVE ---------- */
 .solve-list {
 	display: flex;
@@ -571,6 +700,243 @@ section {
 	max-width: 420px;
 }
 
+.contact {
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 0.8fr 2fr;
+	justify-content: center;
+	padding: 4rem 0;
+	gap: 40px;
+
+	.info-list {
+		margin-top: 2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.panel {
+		border-right: 1px solid var(--line);
+	}
+
+	.info-row {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.icon-box {
+		flex-shrink: 0;
+		width: 48px;
+		height: 48px;
+		border-radius: 10px;
+		background: var(--azure);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.icon-box svg {
+		width: 20px;
+		height: 20px;
+		stroke: var(--white);
+	}
+
+	.info-title {
+		margin: 0;
+		font-size: 15px;
+		font-weight: 600;
+	}
+
+	.info-text {
+		margin: 0.25rem 0 0;
+		color: var(--muted);
+		font-size: 14.5px;
+	}
+
+	.info-text a {
+		color: var(--muted);
+		text-decoration: none;
+	}
+
+	.info-text a:hover {
+		color: var(--accent);
+	}
+
+	.whatsapp-line {
+		margin: 0.35rem 0 0;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: var(--azure);
+		font-size: 14.5px;
+	}
+
+	.whatsapp-line svg {
+		width: 16px;
+		height: 16px;
+		stroke: var(--azure);
+		flex-shrink: 0;
+	}
+
+	.whatsapp-line a {
+		color: var(--muted);
+		text-decoration: none;
+	}
+
+	.whatsapp-line a:hover {
+		color: var(--accent);
+	}
+
+	.hours-card {
+		margin-top: 2rem;
+		padding: 1.5rem;
+		background: var(--accent-5);
+		border: 1px solid var(--accent-20);
+		border-left: 4px solid var(--accent);
+		border-radius: 8px;
+	}
+
+	.hours-card h3 {
+		margin: 0;
+		font-size: 15px;
+		font-weight: 700;
+	}
+
+	.hours-card .hours-list {
+		margin-top: 0.75rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+	.hours-card p {
+		margin: 0;
+		font-size: 13.5px;
+		color: var(--muted);
+	}
+
+	.header {
+		margin-bottom: 2.5rem;
+		border-left: 2px solid var(--accent);
+	}
+
+	.eyebrow {
+		font-size: 11px;
+		text-transform: uppercase;
+		letter-spacing: 0.14em;
+		color: var(--accent);
+		font-weight: 500;
+		margin: 0 0 0.5rem;
+		opacity: 0.6;
+	}
+
+	.heading {
+		font-family: "Fraunces", serif;
+		font-size: 30px;
+		line-height: 1.15;
+		margin: 0;
+	}
+
+	.heading em {
+		font-style: italic;
+	}
+
+	.subtext {
+		margin: 0.75rem 0 0;
+		font-size: 15px;
+		color: var(--muted);
+		max-width: 32rem;
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+		gap: 1.2rem;
+	}
+
+	.row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.2rem;
+	}
+
+	.field {
+		position: relative;
+	}
+
+	label {
+		font-size: 11px;
+		text-transform: uppercase;
+		letter-spacing: 0.12em;
+		color: var(--muted);
+		font-weight: 500;
+	}
+
+	input,
+	select,
+	textarea {
+		display: block;
+		width: 100%;
+		margin-top: 0.6rem;
+		background: transparent;
+		border: 0;
+		border-bottom: 1px solid var(--line);
+		padding: 0.6rem 0;
+		font-family: "Inter", sans-serif;
+		font-size: 15px;
+		color: var(--ink);
+		outline: none;
+		transition: border-color 0.2s ease;
+	}
+
+	input::placeholder,
+	textarea::placeholder {
+		color: #b9b6a9;
+	}
+
+	input:focus,
+	select:focus,
+	textarea:focus {
+		border-bottom-color: var(--accent);
+	}
+
+	select {
+		appearance: none;
+		-webkit-appearance: none;
+		cursor: pointer;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6A63' stroke-width='1.5' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: right 4px center;
+	}
+
+	textarea {
+		resize: none;
+	}
+
+	.actions {
+		padding-top: 0.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		padding: 1.5rem;
+		cursor: pointer;
+		font-weight: 600;
+		transition: background-color 0.2s ease;
+	}
+
+	button:hover {
+		background: var(--azure);
+		color: var(--white);
+	}
+}
+
 /* ---------- FOOTER ---------- */
 footer {
 	background: var(--azure-deep);
@@ -580,14 +946,14 @@ footer {
 .footer-grid {
 	display: flex;
 	justify-content: space-between;
-    align-items: start;
+	align-items: start;
 	gap: 40px;
 	padding-bottom: 44px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-grid .brand {
-    flex: 0.5;
+	flex: 0.5;
 }
 .footer-grid h5 {
 	color: var(--cyan-bright);
