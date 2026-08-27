@@ -86,10 +86,10 @@ nav.wrap {
 	display: inline-flex;
 	gap: 10px;
 
-    img {
-        width: 40px;
-        height: 40px;
-    }
+	img {
+		width: 40px;
+		height: 40px;
+	}
 }
 
 .brand a {
@@ -533,6 +533,17 @@ section {
 			font-weight: 700;
 		}
 
+		.caption .text {
+			display: inline-flex;
+            align-items: end;
+            gap: 10px;
+
+            span {
+                color: #e4e1d8;
+                font-size: 0.8em;
+            }
+		}
+
 		.caption p {
 			margin: 0.3rem 0 0;
 			color: #e4e1d8;
@@ -725,7 +736,7 @@ section {
 	color: var(--accent);
 	font-weight: 500;
 	margin: 0 0 0.5rem;
-    opacity: 0.6;
+	opacity: 0.6;
 }
 
 .contact .heading {
@@ -825,13 +836,13 @@ section {
 	gap: 0.5rem;
 	padding: 1.5rem;
 	cursor: pointer;
-    font-weight: 600;
+	font-weight: 600;
 	transition: background-color 0.2s ease;
 }
 
 .contact button:hover {
 	background: var(--azure);
-    color: var(--white);
+	color: var(--white);
 }
 
 /* ---------- FOOTER ---------- */
