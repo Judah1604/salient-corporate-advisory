@@ -25,18 +25,156 @@
 						<span class="brand-tag"
 							>Professional HR · Organisational Infrastructure ·
 							Corporate Governance</span
-						> </a
-					>
+						>
+					</a>
 				</div>
 				<div class="navlinks">
 					<a href="./about.html">About</a>
 					<a href="./services.html">Services</a>
 					<a href="./contact.html">Contact</a>
-                    <a href="./resources.html">Resources</a>
+					<a href="./resources.html">Resources</a>
 				</div>
 				<a class="navcta" href="./contact.html">Request a Diagnostic</a>
 			</nav>
 		</header>
+		<div class="contact wrap">
+			<div class="card">
+				<div class="header">
+					<p class="eyebrow">Get in touch</p>
+					<h2 class="heading">
+						Tell us where your <em>organisation</em> needs to catch
+						up.
+					</h2>
+					<p class="subtext">
+						A short diagnostic conversation is the front door to the
+						full Salient advisory practice.
+					</p>
+				</div>
+
+				<form method="POST" name="Contact Form" data-netlify="true">
+					<input
+						type="hidden"
+						name="form-name"
+						value="Contact Form"
+					/>
+
+					<div class="row">
+						<div class="field">
+							<label for="name">Full Name *</label>
+							<input
+								id="name"
+								name="Name"
+								required
+								placeholder="John Doe"
+							/>
+						</div>
+						<div class="field">
+							<label for="email">Email Address *</label>
+							<input
+								id="email"
+								name="Email"
+								type="email"
+								required
+								placeholder="john@company.com"
+							/>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="field">
+							<label for="phone">Phone Number *</label>
+							<input
+								id="phone"
+								name="Phone"
+								type="tel"
+								required
+								placeholder="+234 (0) 123 456 7890"
+							/>
+						</div>
+						<div class="field">
+							<label for="company">Company Name *</label>
+							<input
+								id="company"
+								name="Company"
+								required
+								placeholder="Your Company Ltd"
+							/>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="field">
+							<label for="employees">Number of Employees</label>
+							<input
+								id="employees"
+								name="Employees"
+								placeholder="e.g., 50–100"
+							/>
+						</div>
+						<div class="field">
+							<label for="service">I'm interested in *</label>
+							<select
+								id="service"
+								name="Service-Needed[]"
+								required
+								defaultValue=""
+							>
+								<option value="" disabled selected>
+									Select a service
+								</option>
+								<option value="HR Foundation Diagnostic">
+									HR Foundation Diagnostic
+								</option>
+								<option value="HR Infrastructure Build">
+									HR Infrastructure Build
+								</option>
+								<option value="Strategic HR Partnership">
+									Strategic HR Partnership
+								</option>
+								<option value="Staff Recruitment">
+									Staff Recruitment
+								</option>
+								<option value="Free Consultation">
+									Free Consultation
+								</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="field">
+						<label for="message"
+							>Tell us about your HR challenges *</label
+						>
+						<textarea
+							id="message"
+							name="Message"
+							required
+							rows="4"
+							placeholder="What specific HR challenges are you facing? What prompted you to reach out today?"
+						></textarea>
+					</div>
+
+					<div class="actions">
+						<button type="submit" class="btn-primary">
+							Send Inquiry
+							<svg
+								width="15"
+								height="15"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<line x1="5" y1="12" x2="19" y2="12"></line>
+								<polyline points="12 5 19 12 12 19"></polyline>
+							</svg>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
 		<section id="diagnostic">
 			<div class="wrap">
 				<div class="cta-band reveal">
