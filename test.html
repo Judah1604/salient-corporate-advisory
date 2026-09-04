@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources — Salient Corporate Advisory Enterprises</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1B2429; --azure:#32434B; --azure-deep:#232F35;
+    --cyan:#2FB8B8; --cyan-bright:#32CACA;
+    --paper:#F3F6F6; --paper-alt:#E7EDEE; --line:#C7D3D5; --line-soft:#DCE4E5;
+    --white:#FFFFFF; --amber:#B8842F; --amber-bg:#FBF3E7; --amber-line:#E7CFA0;
+    --max:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:500;line-height:1.1;letter-spacing:-0.01em;color:var(--azure-deep);}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px;}
+  .mono{font-family:'IBM Plex Mono',monospace;letter-spacing:0.08em;text-transform:uppercase;font-size:12px;}
+
+  header{position:sticky;top:0;z-index:100;background:rgba(243,246,246,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft);}
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:76px;}
+  .brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:19px;color:var(--azure-deep);}
+  .brand-tag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cyan);margin-top:2px;}
+  .navlinks{display:flex;gap:34px;}
+  .navlinks a{font-size:14px;color:var(--azure);}
+  .navlinks a:hover{color:var(--cyan-bright);}
+  .navcta{background:var(--azure-deep);color:var(--white);padding:11px 20px;border-radius:2px;font-size:13.5px;font-weight:500;}
+  .navcta:hover{background:var(--cyan-bright);color:var(--azure-deep);}
+
+  .page-head{padding:64px 0 12px;}
+  .eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:16px;color:var(--cyan);}
+  .eyebrow::before{content:'';width:26px;height:1px;background:var(--cyan);}
+  .page-head h1{font-size:clamp(30px,4vw,44px);margin-bottom:14px;}
+  .page-head p{max-width:600px;color:#4C5C62;font-size:15.5px;}
+
+  /* -------- Disclaimer -------- */
+  .disclaimer{
+    margin:36px 0 8px;background:var(--amber-bg);border:1px solid var(--amber-line);
+    border-left:4px solid var(--amber);border-radius:3px;padding:30px 34px;
+  }
+  .disclaimer .mono{color:var(--amber);margin-bottom:14px;}
+  .disclaimer h2{font-size:19px;color:var(--azure-deep);margin-bottom:16px;}
+  .disclaimer p{font-size:14px;color:#4C4132;margin-bottom:12px;}
+  .disclaimer p:last-of-type{margin-bottom:0;font-weight:600;color:var(--azure-deep);}
+
+  /* -------- Resource grid -------- */
+  section.resources{padding:64px 0 100px;}
+  .grid-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:32px;}
+  .grid-head h3{font-size:22px;}
+  .count{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#5F7075;}
+
+  .res-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .res-card{
+    background:var(--white);border:1px solid var(--line-soft);border-radius:3px;
+    padding:28px 26px;display:flex;flex-direction:column;gap:12px;
+  }
+  .res-card .tag{color:var(--cyan);}
+  .res-card h4{font-size:18px;color:var(--azure-deep);}
+  .res-card p{font-size:13.5px;color:#4C5C62;flex-grow:1;}
+  .res-card .cta{font-size:13px;font-weight:500;color:var(--azure-deep);border:1px solid var(--line);padding:10px 16px;border-radius:2px;display:inline-block;width:fit-content;}
+  .res-card .cta:hover{border-color:var(--cyan-bright);color:var(--cyan);}
+  .res-card.placeholder{border-style:dashed;background:var(--paper-alt);align-items:center;justify-content:center;text-align:center;min-height:190px;color:#7C8F94;}
+  .res-card.placeholder .mono{color:#9FB0B6;margin-bottom:8px;}
+
+  @media(max-width:900px){ .res-grid{grid-template-columns:1fr;} .navlinks{display:none;} }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div>
+      <div class="brand-name">Salient Corporate Advisory</div>
+      <div class="brand-tag">HR · Organisation · Governance</div>
+    </div>
+    <div class="navlinks">
+      <a href="salient-website.html#about">About</a>
+      <a href="salient-website.html#services">Services</a>
+      <a href="salient-website.html#governance">Governance</a>
+      <a href="#">Resources</a>
+      <a href="salient-website.html#contact">Contact</a>
+    </div>
+    <a class="navcta" href="salient-website.html#diagnostic">Request a Diagnostic</a>
+  </nav>
+</header>
+
+<section class="page-head">
+  <div class="wrap">
+    <div class="eyebrow mono">Resources</div>
+    <h1>Practical tools, built from what we see in the field.</h1>
+    <p>Diagnostics, trackers and assessment tools you can use directly — the same thinking that sits behind our advisory engagements, made self-serve.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="disclaimer">
+    <div class="mono">Important Notice — Please Read Before Using This Resource</div>
+    <h2>HR Documentation Kit — Terms of Use</h2>
+    <p>This HR Documentation Kit is provided by Salient Corporate Advisory Enterprises for general information, practical guidance and administrative support. The templates are not legal advice and should not be regarded as a substitute for advice from a qualified legal practitioner.</p>
+    <p>Employment laws, regulations, contractual obligations and workplace circumstances vary. Users are responsible for reviewing, adapting and appropriately applying each document to their specific circumstances and ensuring compliance with applicable Nigerian employment laws and regulations.</p>
+    <p>Particular care should be taken when using documents relating to disciplinary action, suspension, termination, redundancy or other matters that may affect an employee's rights or employment status. Where appropriate, users should obtain professional legal advice before issuing such documents.</p>
+    <p>Salient Corporate Advisory Enterprises does not warrant that any template is suitable for every organisation or circumstance and accepts no responsibility for any loss, claim, liability or consequence arising from the use, modification or reliance upon these templates.</p>
+    <p>By proceeding to use this resource, you acknowledge and accept the above terms.</p>
+  </div>
+</div>
+
+<section class="resources">
+  <div class="wrap">
+    <div class="grid-head">
+      <h3>Available Tools</h3>
+      <span class="count">8 of 8 loaded</span>
+    </div>
+    <div class="res-grid">
+
+      <div class="res-card">
+        <span class="tag mono">Diagnostic</span>
+        <h4>Company Culture Assessment Tool</h4>
+        <p>An 8-dimension, 32-question diagnostic (about 10 minutes) that helps Nigerian SME leaders understand the health of their workplace culture and pinpoint exactly where to focus for stronger people outcomes.</p>
+        <a class="cta" href="Salient_Consulting_-_Culture_Assessment_Tool.html">Open tool →</a>
+      </div>
+
+      <div class="res-card">
+        <span class="tag mono">Diagnostic</span>
+        <h4>Employee Retention Toolkit</h4>
+        <p>A 5-module diagnostic that identifies the root causes of staff turnover across 6 risk factors, generates a tailored retention score, and hands you a library of 40+ evidence-based retention strategies for Nigerian SMEs — plus exit-interview and talent-tracker components.</p>
+        <a class="cta" href="Salient_Consulting_-_Employee_Retention_Toolkit.html">Open tool →</a>
+      </div>
+
+      <div class="res-card">
+        <span class="tag mono">Dashboard</span>
+        <h4>Financial Dashboard</h4>
+        <p>An interactive monthly/quarterly/annual dashboard — enter revenue, expenses and payroll figures and it auto-generates net profit, margin, payroll-as-% -of-revenue, and expense-breakdown visualisations for board- or founder-level reporting.</p>
+        <a class="cta" href="Salient_Consulting_-_Financial_Dashboard.html">Open tool →</a>
+      </div>
+
+      <div class="res-card">
+        <span class="tag mono">Tracker</span>
+        <h4>Quarterly HR Compliance Tracker</h4>
+        <p>A quarter-by-quarter compliance tracker across every HR category, showing completed, in-progress, pending and overdue items at a glance, with a summary report you can export or share with leadership.</p>
+        <a class="cta" href="Salient_Consulting_-_HR_Compliance_Tracker.html">Open tool →</a>
+      </div>
+
+      <div class="res-card">
+        <span class="tag mono">Documentation</span>
+        <h4>HR Documentation Kit</h4>
+        <p>Instant access to 12 professionally worded, legally-aware HR letter templates across 5 categories — fill in the fields and generate a ready-to-use document in under two minutes. Governed by the disclaimer above.</p>
+        <a class="cta" href="Salient_Consulting_-_HR_Documentation_Kit.html">Open tool →</a>
+      </div>
+
+      <div class="res-card">
+        <span class="tag mono">Tracker</span>
+        <h4>Onboarding Compliance Kit</h4>
+        <p>An end-to-end new-hire onboarding tracker covering documentation, compliance, IT setup, induction and 30/60/90-day milestones, with a three-party sign-off to close out the process cleanly.</p>
+        <a class="cta" href="Salient_Consulting_-_Onboarding_Compliance_Kit.html">Open tool →</a>
+      </div>
+
+      <div class="res-card">
+        <span class="tag mono">Toolkit</span>
+        <h4>Performance Review Toolkit</h4>
+        <p>A structured, 5-section performance review framework — KPI assessment, competency scoring, development planning and a final rating — built for fair, documented reviews of middle management and professional staff.</p>
+        <a class="cta" href="Salient_Consulting_-_Performance_Review_Toolkit.html">Open tool →</a>
+      </div>
+
+      <div class="res-card">
+        <span class="tag mono">Diagnostic</span>
+        <h4>SME Scaling Roadmap</h4>
+        <p>A 30-question diagnostic across 6 scaling pillars (about 8 minutes) that produces an instant, personalised, stage-by-stage growth roadmap with prioritised HR and business actions for your Nigerian SME.</p>
+        <a class="cta" href="Salient_Consulting_-_SME_Scaling_Roadmap.html">Open tool →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
