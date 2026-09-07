@@ -74,9 +74,9 @@ header {
 	position: sticky;
 	top: 0;
 	z-index: 100;
-	background: var(--azure);
+	background: var(--ink);
 	backdrop-filter: blur(10px);
-	border-bottom: 1px solid var(--line-soft);
+	border-bottom: 1px solid var(--cyan-bright);
 }
 nav.wrap {
 	display: flex;

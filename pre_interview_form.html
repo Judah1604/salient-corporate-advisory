@@ -1,410 +1,701 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pre-Interview Form - Salient Consulting</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a3a4a 0%, #2d5f73 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            overflow: hidden;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, #1a3a4a 0%, #2d5f73 100%);
-            padding: 40px 30px;
-            text-align: center;
-            color: white;
-        }
-        
-        .logo {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 20px;
-        }
-        
-        .header h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-        
-        .header p {
-            font-size: 16px;
-            opacity: 0.9;
-        }
-        
-        .form-content {
-            padding: 40px 30px;
-        }
-        
-        .form-section {
-            margin-bottom: 35px;
-        }
-        
-        .section-title {
-            font-size: 20px;
-            color: #1a3a4a;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #4db8d8;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: 500;
-            font-size: 14px;
-        }
-        
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        input[type="url"],
-        input[type="date"],
-        textarea,
-        select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 14px;
-            transition: border-color 0.3s;
-        }
-        
-        input:focus,
-        textarea:focus,
-        select:focus {
-            outline: none;
-            border-color: #4db8d8;
-        }
-        
-        textarea {
-            min-height: 100px;
-            resize: vertical;
-            font-family: inherit;
-        }
-        
-        .checkbox-group {
-            margin: 10px 0;
-        }
-        
-        .checkbox-group label {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            font-weight: normal;
-        }
-        
-        .checkbox-group input[type="checkbox"],
-        .checkbox-group input[type="radio"] {
-            width: auto;
-            margin-right: 10px;
-        }
-        
-        .inline-input {
-            display: inline-block;
-            width: auto;
-            min-width: 150px;
-            margin-left: 10px;
-        }
-        
-        .submit-btn {
-            background: linear-gradient(135deg, #4db8d8 0%, #3a9fb8 100%);
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            font-size: 16px;
-            font-weight: 600;
-            border-radius: 6px;
-            cursor: pointer;
-            width: 100%;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(77, 184, 216, 0.4);
-        }
-        
-        .footer {
-            background: #f8f9fa;
-            padding: 20px 30px;
-            text-align: center;
-            color: #666;
-            font-size: 12px;
-            border-top: 1px solid #eee;
-        }
-        
-        .required {
-            color: #e74c3c;
-        }
-        
-        @media (max-width: 600px) {
-            .form-content {
-                padding: 30px 20px;
-            }
-            
-            .header {
-                padding: 30px 20px;
-            }
-            
-            .header h1 {
-                font-size: 24px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <img src="./images/logo.png" alt="Salient Consulting Logo" class="logo">
-            <h1>Pre-Interview Information Form</h1>
-            <p>Thank you for your interest in joining Salient Consulting</p>
-        </div>
-        
-        <form class="form-content" name="Pre-Interview Form" id="preInterviewForm" netlify>
-            <!-- Personal Information -->
-            <div class="form-section">
-                <h2 class="section-title">Personal Information</h2>
-                
-                <div class="form-group">
-                    <label>Full Name <span class="required">*</span></label>
-                    <input type="text" name="fullName" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>Email Address <span class="required">*</span></label>
-                    <input type="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>Phone Number <span class="required">*</span></label>
-                    <input type="tel" name="phone" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>Current Location <span class="required">*</span></label>
-                    <input type="text" name="location" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>LinkedIn Profile</label>
-                    <input type="url" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
-                </div>
-            </div>
-            
-            <!-- Position Details -->
-            <div class="form-section">
-                <h2 class="section-title">Position Details</h2>
-                
-                <div class="form-group">
-                    <label>Position Applied For <span class="required">*</span></label>
-                    <input type="text" name="position" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>How did you hear about this opportunity? <span class="required">*</span></label>
-                    <div class="checkbox-group">
-                        <label>
-                            <input type="radio" name="source" value="jobBoard" required>
-                            Job Board (please specify): <input type="text" class="inline-input" name="jobBoardName">
-                        </label>
-                        <label>
-                            <input type="radio" name="source" value="linkedin">
-                            LinkedIn
-                        </label>
-                        <label>
-                            <input type="radio" name="source" value="referral">
-                            Employee Referral (Name): <input type="text" class="inline-input" name="referralName">
-                        </label>
-                        <label>
-                            <input type="radio" name="source" value="website">
-                            Company Website
-                        </label>
-                        <label>
-                            <input type="radio" name="source" value="agency">
-                            Recruitment Agency
-                        </label>
-                        <label>
-                            <input type="radio" name="source" value="other">
-                            Other: <input type="text" class="inline-input" name="otherSource">
-                        </label>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Professional Background -->
-            <div class="form-section">
-                <h2 class="section-title">Professional Background</h2>
-                
-                <div class="form-group">
-                    <label>Current/Most Recent Employer <span class="required">*</span></label>
-                    <input type="text" name="employer" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>Current/Most Recent Job Title <span class="required">*</span></label>
-                    <input type="text" name="jobTitle" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>Years of Relevant Experience <span class="required">*</span></label>
-                    <input type="text" name="experience" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>Brief summary of your current role and key responsibilities (2-3 sentences) <span class="required">*</span></label>
-                    <textarea name="roleSummary" required></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label>What interests you most about this opportunity at Salient Consulting? <span class="required">*</span></label>
-                    <textarea name="interest" required></textarea>
-                </div>
-            </div>
-            
-            <!-- Availability & Logistics -->
-            <div class="form-section">
-                <h2 class="section-title">Availability & Logistics</h2>
-                
-                <div class="form-group">
-                    <label>Notice Period Required <span class="required">*</span></label>
-                    <input type="text" name="noticePeriod" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>Expected Salary Range <span class="required">*</span></label>
-                    <input type="text" name="salary" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>Are you interviewing with other companies? <span class="required">*</span></label>
-                    <div class="checkbox-group">
-                        <label>
-                            <input type="radio" name="otherInterviews" value="yes" required>
-                            Yes
-                        </label>
-                        <label>
-                            <input type="radio" name="otherInterviews" value="no">
-                            No
-                        </label>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label>Preferred Interview Date/Time - First Choice</label>
-                    <input type="text" name="firstChoice" placeholder="e.g., Monday, Nov 25 at 2:00 PM">
-                </div>
-                
-                <div class="form-group">
-                    <label>Preferred Interview Date/Time - Second Choice</label>
-                    <input type="text" name="secondChoice" placeholder="e.g., Tuesday, Nov 26 at 10:00 AM">
-                </div>
-                
-                <div class="form-group">
-                    <label>Interview Format Preference <span class="required">*</span></label>
-                    <div class="checkbox-group">
-                        <label>
-                            <input type="radio" name="format" value="inPerson" required>
-                            In-person at our office
-                        </label>
-                        <label>
-                            <input type="radio" name="format" value="video">
-                            Video call
-                        </label>
-                        <label>
-                            <input type="radio" name="format" value="phone">
-                            Phone call
-                        </label>
-                        <label>
-                            <input type="radio" name="format" value="noPreference">
-                            No preference
-                        </label>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Additional Information -->
-            <div class="form-section">
-                <h2 class="section-title">Additional Information</h2>
-                
-                <div class="form-group">
-                    <label>Do you have any accessibility requirements or accommodations we should arrange?</label>
-                    <textarea name="accommodations"></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label>Is there anything specific you'd like to discuss or learn about during the interview?</label>
-                    <textarea name="specificTopics"></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label>Please confirm you have ready:</label>
-                    <div class="checkbox-group">
-                        <label>
-                            <input type="checkbox" name="documents" value="cv">
-                            Updated CV/Resume
-                        </label>
-                        <label>
-                            <input type="checkbox" name="documents" value="portfolio">
-                            Portfolio (if applicable)
-                        </label>
-                        <label>
-                            <input type="checkbox" name="documents" value="references">
-                            References (available upon request)
-                        </label>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Authorization -->
-            <div class="form-section">
-                <div class="form-group">
-                    <label>
-                        <input type="checkbox" required style="width: auto; display: inline-block; margin-right: 10px;">
-                        I confirm that the information provided is accurate and complete to the best of my knowledge <span class="required">*</span>
-                    </label>
-                </div>
-            </div>
-            
-            <button type="submit" class="submit-btn">Submit Pre-Interview Form</button>
-        </form>
-        
-        <div class="footer">
-            <p><strong>Salient Consulting</strong> | recruitment@salientconsulting.com</p>
-            <p style="margin-top: 10px;">Salient Consulting is an equal opportunity employer committed to diversity and inclusion in the workplace.</p>
-        </div>
-    </div>
-    
-    <script>
-        document.getElementById('preInterviewForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for submitting your pre-interview form! We will contact you within 24-48 hours to confirm your interview details.');
-            // Here you would typically send the form data to your server
-            // this.submit();
-        });
-    </script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pre-Interview Form - Salient Consulting</title>
+		<style>
+			:root {
+                --ink: #1b2429;
+				--azure: #32434b;
+				--line-soft: #dce4e5;
+				--cyan-bright: #00ffff;
+				--white: #ffffff;
+                --azure-deep: #232f35;
+				--max: 1180px;
+			}
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+				background: var(--ink);
+				min-height: 100vh;
+			}
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+			.wrap {
+				max-width: var(--max);
+				margin: 0 auto;
+				padding: 0 32px;
+			}
+			/* ---------- NAV ---------- */
+			header {
+				position: sticky;
+				top: 0;
+				z-index: 100;
+				background: var(--ink);
+				backdrop-filter: blur(10px);
+                border-bottom: 1px solid var(--cyan-bright);
+			}
+			nav.wrap {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				height: 76px;
+			}
+
+			.brand {
+				display: inline-flex;
+				gap: 10px;
+
+				img {
+					width: 40px;
+					height: 40px;
+				}
+			}
+
+			.brand a {
+				display: flex;
+				flex-direction: column;
+				line-height: 1.15;
+			}
+			.brand-name {
+				font-family: "Fraunces", serif;
+				font-weight: 600;
+				font-size: 19px;
+				color: var(--white);
+			}
+			.brand-tag {
+				font-family: "IBM Plex Mono", monospace;
+				font-size: 10px;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: var(--cyan-bright);
+				margin-top: 2px;
+				width: 300px;
+			}
+			.navlinks {
+				display: flex;
+				gap: 34px;
+				align-items: center;
+			}
+			.navlinks a {
+				font-size: 14px;
+				color: var(--white);
+				position: relative;
+				padding: 4px 0;
+			}
+			.navlinks a:hover {
+				color: var(--cyan-bright);
+			}
+			.navcta {
+				background: var(--azure-deep);
+				color: var(--white);
+				padding: 11px 20px;
+				border-radius: 2px;
+				font-size: 13.5px;
+				font-weight: 500;
+				border: 1px solid var(--azure-deep);
+				transition: all 0.2s ease;
+			}
+			.navcta:hover {
+				background: var(--cyan);
+				border-color: var(--cyan);
+				color: var(--azure-deep);
+			}
+			.navtoggle {
+				display: none;
+			}
+
+			.container {
+				max-width: 800px;
+				margin: 0 auto;
+				background: white;
+				border-radius: 12px;
+				box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+				overflow: hidden;
+				margin-top: 50px;
+			}
+
+			.header {
+				padding: 40px 30px;
+                padding-bottom: 10px;
+				text-align: center;
+			}
+
+			.logo {
+				width: 120px;
+				height: 120px;
+				margin: 0 auto 20px;
+			}
+
+			.header h1 {
+				font-size: 28px;
+				margin-bottom: 10px;
+			}
+
+			.header p {
+				font-size: 16px;
+				opacity: 0.9;
+			}
+
+			.form-content {
+				padding: 40px 30px;
+			}
+
+			.form-section {
+				margin-bottom: 35px;
+			}
+
+			.section-title {
+				font-size: 20px;
+				color: #1a3a4a;
+				margin-bottom: 20px;
+				padding-bottom: 10px;
+				border-bottom: 2px solid #4db8d8;
+			}
+
+			.form-group {
+				margin-bottom: 20px;
+			}
+
+			label {
+				display: block;
+				margin-bottom: 8px;
+				color: #333;
+				font-weight: 500;
+				font-size: 14px;
+			}
+
+			input[type="text"],
+			input[type="email"],
+			input[type="tel"],
+			input[type="url"],
+			input[type="date"],
+			textarea,
+			select {
+				width: 100%;
+				padding: 12px;
+				border: 1px solid #ddd;
+				border-radius: 6px;
+				font-size: 14px;
+				transition: border-color 0.3s;
+			}
+
+			input:focus,
+			textarea:focus,
+			select:focus {
+				outline: none;
+				border-color: #4db8d8;
+			}
+
+			textarea {
+				min-height: 100px;
+				resize: vertical;
+				font-family: inherit;
+			}
+
+			.checkbox-group {
+				margin: 10px 0;
+			}
+
+			.checkbox-group label {
+				display: flex;
+				align-items: center;
+				margin-bottom: 10px;
+				font-weight: normal;
+			}
+
+			.checkbox-group input[type="checkbox"],
+			.checkbox-group input[type="radio"] {
+				width: auto;
+				margin-right: 10px;
+			}
+
+			.inline-input {
+				display: inline-block;
+				width: auto;
+				min-width: 150px;
+				margin-left: 10px;
+			}
+
+			.submit-btn {
+				background: linear-gradient(135deg, #4db8d8 0%, #3a9fb8 100%);
+				color: white;
+				border: none;
+				padding: 15px 40px;
+				font-size: 16px;
+				font-weight: 600;
+				border-radius: 6px;
+				cursor: pointer;
+				width: 100%;
+				transition:
+					transform 0.2s,
+					box-shadow 0.2s;
+			}
+
+			.submit-btn:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 5px 15px rgba(77, 184, 216, 0.4);
+			}
+
+			.footer {
+				background: #f8f9fa;
+				padding: 20px 30px;
+				text-align: center;
+				color: #666;
+				font-size: 12px;
+				border-top: 1px solid #eee;
+			}
+
+			.required {
+				color: #e74c3c;
+			}
+
+			@media (max-width: 600px) {
+				.form-content {
+					padding: 30px 20px;
+				}
+
+				.header {
+					padding: 30px 20px;
+				}
+
+				.header h1 {
+					font-size: 24px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav class="wrap">
+				<div class="brand">
+					<img src="./images/logo.png" alt="Logo" />
+					<div class="text">
+						<a href="./index.html">
+							<span class="brand-name"
+								>Salient Corporate Advisory Ent.</span
+							>
+							<span class="brand-tag"
+								>Professional HR · Organisational Infrastructure
+								· Corporate Governance</span
+							>
+						</a>
+					</div>
+				</div>
+				<div class="navlinks">
+					<a href="./about.html">About</a>
+					<a href="./services.html">Services</a>
+					<a href="./contact.html">Contact</a>
+					<a href="./resources.html">Resources</a>
+				</div>
+			</nav>
+		</header>
+		<div class="container">
+			<div class="header">
+				<h1>Pre-Interview Information Form</h1>
+				<p>Thank you for your interest in joining Salient Consulting</p>
+			</div>
+
+			<form
+				class="form-content"
+				name="Pre-Interview Form"
+				id="preInterviewForm"
+				netlify
+			>
+				<!-- Personal Information -->
+				<div class="form-section">
+					<h2 class="section-title">Personal Information</h2>
+
+					<div class="form-group">
+						<label>Full Name <span class="required">*</span></label>
+						<input type="text" name="fullName" required />
+					</div>
+
+					<div class="form-group">
+						<label
+							>Email Address
+							<span class="required">*</span></label
+						>
+						<input type="email" name="email" required />
+					</div>
+
+					<div class="form-group">
+						<label
+							>Phone Number <span class="required">*</span></label
+						>
+						<input type="tel" name="phone" required />
+					</div>
+
+					<div class="form-group">
+						<label
+							>Current Location
+							<span class="required">*</span></label
+						>
+						<input type="text" name="location" required />
+					</div>
+
+					<div class="form-group">
+						<label>LinkedIn Profile</label>
+						<input
+							type="url"
+							name="linkedin"
+							placeholder="https://linkedin.com/in/yourprofile"
+						/>
+					</div>
+				</div>
+
+				<!-- Position Details -->
+				<div class="form-section">
+					<h2 class="section-title">Position Details</h2>
+
+					<div class="form-group">
+						<label
+							>Position Applied For
+							<span class="required">*</span></label
+						>
+						<input type="text" name="position" required />
+					</div>
+
+					<div class="form-group">
+						<label
+							>How did you hear about this opportunity?
+							<span class="required">*</span></label
+						>
+						<div class="checkbox-group">
+							<label>
+								<input
+									type="radio"
+									name="source"
+									value="jobBoard"
+									required
+								/>
+								Job Board (please specify):
+								<input
+									type="text"
+									class="inline-input"
+									name="jobBoardName"
+								/>
+							</label>
+							<label>
+								<input
+									type="radio"
+									name="source"
+									value="linkedin"
+								/>
+								LinkedIn
+							</label>
+							<label>
+								<input
+									type="radio"
+									name="source"
+									value="referral"
+								/>
+								Employee Referral (Name):
+								<input
+									type="text"
+									class="inline-input"
+									name="referralName"
+								/>
+							</label>
+							<label>
+								<input
+									type="radio"
+									name="source"
+									value="website"
+								/>
+								Company Website
+							</label>
+							<label>
+								<input
+									type="radio"
+									name="source"
+									value="agency"
+								/>
+								Recruitment Agency
+							</label>
+							<label>
+								<input
+									type="radio"
+									name="source"
+									value="other"
+								/>
+								Other:
+								<input
+									type="text"
+									class="inline-input"
+									name="otherSource"
+								/>
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<!-- Professional Background -->
+				<div class="form-section">
+					<h2 class="section-title">Professional Background</h2>
+
+					<div class="form-group">
+						<label
+							>Current/Most Recent Employer
+							<span class="required">*</span></label
+						>
+						<input type="text" name="employer" required />
+					</div>
+
+					<div class="form-group">
+						<label
+							>Current/Most Recent Job Title
+							<span class="required">*</span></label
+						>
+						<input type="text" name="jobTitle" required />
+					</div>
+
+					<div class="form-group">
+						<label
+							>Years of Relevant Experience
+							<span class="required">*</span></label
+						>
+						<input type="text" name="experience" required />
+					</div>
+
+					<div class="form-group">
+						<label
+							>Brief summary of your current role and key
+							responsibilities (2-3 sentences)
+							<span class="required">*</span></label
+						>
+						<textarea name="roleSummary" required></textarea>
+					</div>
+
+					<div class="form-group">
+						<label
+							>What interests you most about this opportunity at
+							Salient Consulting?
+							<span class="required">*</span></label
+						>
+						<textarea name="interest" required></textarea>
+					</div>
+				</div>
+
+				<!-- Availability & Logistics -->
+				<div class="form-section">
+					<h2 class="section-title">Availability & Logistics</h2>
+
+					<div class="form-group">
+						<label
+							>Notice Period Required
+							<span class="required">*</span></label
+						>
+						<input type="text" name="noticePeriod" required />
+					</div>
+
+					<div class="form-group">
+						<label
+							>Expected Salary Range
+							<span class="required">*</span></label
+						>
+						<input type="text" name="salary" required />
+					</div>
+
+					<div class="form-group">
+						<label
+							>Are you interviewing with other companies?
+							<span class="required">*</span></label
+						>
+						<div class="checkbox-group">
+							<label>
+								<input
+									type="radio"
+									name="otherInterviews"
+									value="yes"
+									required
+								/>
+								Yes
+							</label>
+							<label>
+								<input
+									type="radio"
+									name="otherInterviews"
+									value="no"
+								/>
+								No
+							</label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label
+							>Preferred Interview Date/Time - First Choice</label
+						>
+						<input
+							type="text"
+							name="firstChoice"
+							placeholder="e.g., Monday, Nov 25 at 2:00 PM"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label
+							>Preferred Interview Date/Time - Second
+							Choice</label
+						>
+						<input
+							type="text"
+							name="secondChoice"
+							placeholder="e.g., Tuesday, Nov 26 at 10:00 AM"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label
+							>Interview Format Preference
+							<span class="required">*</span></label
+						>
+						<div class="checkbox-group">
+							<label>
+								<input
+									type="radio"
+									name="format"
+									value="inPerson"
+									required
+								/>
+								In-person at our office
+							</label>
+							<label>
+								<input
+									type="radio"
+									name="format"
+									value="video"
+								/>
+								Video call
+							</label>
+							<label>
+								<input
+									type="radio"
+									name="format"
+									value="phone"
+								/>
+								Phone call
+							</label>
+							<label>
+								<input
+									type="radio"
+									name="format"
+									value="noPreference"
+								/>
+								No preference
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<!-- Additional Information -->
+				<div class="form-section">
+					<h2 class="section-title">Additional Information</h2>
+
+					<div class="form-group">
+						<label
+							>Do you have any accessibility requirements or
+							accommodations we should arrange?</label
+						>
+						<textarea name="accommodations"></textarea>
+					</div>
+
+					<div class="form-group">
+						<label
+							>Is there anything specific you'd like to discuss or
+							learn about during the interview?</label
+						>
+						<textarea name="specificTopics"></textarea>
+					</div>
+
+					<div class="form-group">
+						<label>Please confirm you have ready:</label>
+						<div class="checkbox-group">
+							<label>
+								<input
+									type="checkbox"
+									name="documents"
+									value="cv"
+								/>
+								Updated CV/Resume
+							</label>
+							<label>
+								<input
+									type="checkbox"
+									name="documents"
+									value="portfolio"
+								/>
+								Portfolio (if applicable)
+							</label>
+							<label>
+								<input
+									type="checkbox"
+									name="documents"
+									value="references"
+								/>
+								References (available upon request)
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<!-- Authorization -->
+				<div class="form-section">
+					<div class="form-group">
+						<label>
+							<input
+								type="checkbox"
+								required
+								style="
+									width: auto;
+									display: inline-block;
+									margin-right: 10px;
+								"
+							/>
+							I confirm that the information provided is accurate
+							and complete to the best of my knowledge
+							<span class="required">*</span>
+						</label>
+					</div>
+				</div>
+
+				<button type="submit" class="submit-btn">
+					Submit Pre-Interview Form
+				</button>
+			</form>
+
+			<div class="footer">
+				<p>
+					<strong>Salient Consulting</strong> |
+					recruitment@salientconsulting.com
+				</p>
+				<p style="margin-top: 10px">
+					Salient Consulting is an equal opportunity employer
+					committed to diversity and inclusion in the workplace.
+				</p>
+			</div>
+		</div>
+
+		<script>
+			document
+				.getElementById("preInterviewForm")
+				.addEventListener("submit", function (e) {
+					e.preventDefault();
+					alert(
+						"Thank you for submitting your pre-interview form! We will contact you within 24-48 hours to confirm your interview details.",
+					);
+					// Here you would typically send the form data to your server
+					// this.submit();
+				});
+		</script>
+	</body>
 </html>
