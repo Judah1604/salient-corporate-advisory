@@ -715,7 +715,7 @@ section {
 }
 .cta-band h3 {
 	color: var(--white);
-	font-size: 26px;
+	font-size: 20px;
 	max-width: 420px;
 }
 .cta-band p {
@@ -991,6 +991,8 @@ footer {
 
 .footer-grid .brand {
 	flex: 0.5;
+    gap: 0;
+    flex-direction: column;
 }
 .footer-grid h5 {
 	color: var(--cyan-bright);
@@ -1014,7 +1016,6 @@ footer {
 	font-family: "Fraunces", serif;
 	font-size: 20px;
 	color: var(--white);
-	margin-bottom: 12px;
 }
 .foot-bottom {
 	display: flex;
@@ -1046,6 +1047,7 @@ footer {
 	.cta-band {
 		flex-direction: column;
 		align-items: flex-start;
+        margin-top: 230px;
 	}
 	.solve-row {
 		grid-template-columns: 1fr;
